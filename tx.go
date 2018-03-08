@@ -50,6 +50,7 @@ func (d *TxDispatcher) run(ctx context.Context) {
 	//
 	// fan-out
 	//
+
 	var wg sync.WaitGroup
 
 	wg.Add(1)

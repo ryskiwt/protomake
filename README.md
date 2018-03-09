@@ -1,6 +1,6 @@
-# protomake - Protocol Maker
+# protomake
 
-A framework to build realtime protocol
+Protocol Maker - Framework to develop realtime protocol.
 
 [![GoDoc](https://godoc.org/github.com/ryskiwt/pubsub-go?status.svg)](https://godoc.org/github.com/ryskiwt/pubsub-go)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://github.com/ryskiwt/pubsub-go/blob/master/LICENSE)

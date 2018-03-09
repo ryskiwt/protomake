@@ -1,10 +1,14 @@
-## protomake - Protocol Maker
+# protomake - Protocol Maker
 
 A framework to build realtime protocol
 
-## example
+[![GoDoc](https://godoc.org/github.com/ryskiwt/pubsub-go?status.svg)](https://godoc.org/github.com/ryskiwt/pubsub-go)
+[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://github.com/ryskiwt/pubsub-go/blob/master/LICENSE)
 
-### Define receive handler
+### example
+Simple Ping/Pong Server
+
+#### Define receive handler
 - receive handler **receives message** and **emits event**
 - any cases listed below is OK
   - receive **some messages** and **emit one event**
@@ -42,7 +46,7 @@ func (x *rx) Handle(ctx context.Context, msgChan <-chan interface{}) <-chan inte
 }
 ```
 
-### Define Intercept Handler
+#### Define Intercept Handler
 - intercept handler **receives event** and **emits event**
 - any cases listed below is OK
   - receive **some events** and **emit one event**
@@ -78,7 +82,7 @@ func (x *ic) Handle(ctx context.Context, inEvtChan <-chan interface{}) <-chan in
 ```
 
 
-### Define Transmit Handler
+#### Define Transmit Handler
 - transmit handler **receives event** and **emits message**
 - any cases listed below is OK
   - receive **some events** and **emit one message**
@@ -116,7 +120,7 @@ func (x *tx) Handle(ctx context.Context, evtChan <-chan interface{}) <-chan inte
 }
 ```
 
-### Start serve
+#### Start serve
 
 - bind inbound / outbound channels to dispatcher
 - register handlers to dispatcher
